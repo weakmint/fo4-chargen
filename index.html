@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Start Me Up Character Generator</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    <div id="content">
+        <h1>Your Character</h1>
+        <h3>Special</h3>
+        <span>Strength: {{ special.strength }}</span><br>
+        <span>Perception: {{ special.perception }}</span><br>
+        <span>Endurance: {{ special.endurance }}</span><br>
+        <span>Charisma: {{ special.charisma }}</span><br>
+        <span>Intelligence: {{ special.intelligence }}</span><br>
+        <span>Agility: {{ special.agility }}</span><br>
+        <span>Luck: {{ special.luck }}</span><br>
+        <h3>Class</h3>
+        <span>{{ className }}</span>
+        <h3>Starting Location</h3>
+        <span>{{ startingLocation }}</span>
+        <h3>Traits</h3>
+        <div v-for="trait in traits">
+            {{trait}}
+        </div>
+    </div>
+    <script src="generator.js"></script>
+</body>
+</html>
